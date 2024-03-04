@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9qTscWB2+Kd/zsV7fU8jX8CZnW5OIPAQ37YQe/mwnCZvin0EkF8+swHYQbTZq/TjZIacBwDGwhn2cUYuiV6h5g==",
+  "dgSpecHash": "tQdbT/DYmjfh77s62Ye91LR5ex8rZPTSdRar0gt/+m/pDRNvPBgTQmaiHUWm4b7GQyrJvFrtvSn5TOweXIpJJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\nbRecruitment.csproj",
+  "projectFilePath": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\nbRecruitment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MarkJearoneFAlvarez\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\MarkJearoneFAlvarez\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
