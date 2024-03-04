@@ -1,0 +1,124 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\models\\nbrecruitmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\models\\nbrecruitmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\users\\markjearonefalvarez\\source\\repos\\nbrecruitment\\nbrecruitment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NbRecruitmentContext.cs",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "RelativeToolTip": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T00:50:34.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\appsettings.json",
+              "RelativeDocumentMoniker": "nbRecruitment\\appsettings.json",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\appsettings.json",
+              "RelativeToolTip": "nbRecruitment\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAB0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-02-27T08:43:11.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CandidateController.cs",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\CandidateController.cs",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\CandidateController.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAgwIgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:17:23.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\PostController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\PostController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAA1wBgAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T12:17:46.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostingController.cs",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\PostingController.cs",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\PostingController.cs",
+              "ViewState": "AQIAAO0AAAAAAAAAAAAgwPcAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T07:11:47.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\MarkJearoneFAlvarez\\source\\repos\\nbRecruitment\\nbRecruitment\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAAwFgAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-22T06:23:20.659Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
