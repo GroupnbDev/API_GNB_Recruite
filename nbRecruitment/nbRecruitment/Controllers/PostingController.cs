@@ -244,10 +244,6 @@ namespace nbRecruitment.Controllers
                 foreach (var item in LanguageCodes)
                 {
 
-
-                  
-
-
                    
                         int count = 1;
                         foreach (int Id in test[theIndex])
@@ -295,6 +291,8 @@ namespace nbRecruitment.Controllers
                 }
             }
         }
+
+
 
     }
 }

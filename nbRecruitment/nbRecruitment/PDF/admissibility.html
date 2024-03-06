@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet" />
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Noto Sans", sans-serif;
+    }
+
+    h1 {
+        font-size: 0.7rem;
+    }
+
+    .one {
+        border: 1px solid black;
+        height: auto;
+        padding: 0.12rem 1rem;
+        position: relative;
+    }
+
+        .one h1 {
+            font-weight: 500;
+        }
+
+    #dob {
+        position: absolute;
+        right: 1rem;
+        top: 0.25rem;
+    }
+
+    #dobvalue {
+        position: absolute;
+        right: 1rem;
+        top: 1.25rem;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .background-info {
+        padding: 0.5rem;
+        gap: 0.25rem;
+    }
+
+        .background-info p {
+            font-weight: 600;
+        }
+
+    .first-box-container {
+        border: 1px solid black;
+        position: relative;
+    }
+
+    .child-box-container {
+        position: relative;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    .count-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        font-size: 0.6rem;
+        padding: 0.1rem;
+    }
+
+    .main-question-container {
+        padding: 0.5rem 0.65rem;
+        gap: 0.25rem;
+    }
+
+        .main-question-container h1 {
+            font-weight: 400;
+        }
+
+    .question-container h1 {
+        max-width: 75%;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .text-area-container h1 {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .checkbox-container {
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+        .checkbox-container label {
+            font-size: 0.7rem;
+        }
+
+    .text-area-container {
+        gap: 0.2rem;
+    }
+
+    .border-container {
+        height: 7rem;
+        border: 1px solid black;
+    }
+
+    textarea {
+        border: 1px solid black;
+        outline: none;
+        resize: none;
+        font-size: 0.7rem;
+        height: 5rem;
+    }
+
+    #message {
+        max-width: 99%;
+    }
+
+    .last-box-container {
+        height: 10rem;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+    #last-textarea {
+        border: none;
+        resize: none;
+        padding: 0.5rem;
+    }
+
+    .last-box-container .text-area-container h1 {
+        padding: 1rem;
+    }
+
+    .checkbox-container {
+        margin: auto;
+        float: left;
+    }
+
+    #checkbox {
+        position: relative;
+    }
+
+    .signature-form {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+
+        .signature-form h1 {
+            font-size: 0.75rem;
+        }
+
+        .signature-form p {
+            font-size: 0.7rem;
+        }
+</style>
+
+<body>
+    <main>
+        <div id="firstpage">
+            <section class="one">
+                <div>
+                    <h1>Applicant Name</h1>
+                    <span style="font-size: 0.7rem">Lorem ipsum dolor sit amet.</span>
+                </div>
+                <div>
+                    <h1 id="dob">Date of Birth</h1>
+                    <span id="dobvalue" style="font-size: 0.7rem">January 24 , 2023</span>
+                </div>
+            </section>
+            <section class="background-info">
+                <h1 style="padding: 0.25rem">Background Information</h1>
+                <h1 style="padding: 0.25rem">
+                    You Must Complete this section if you are 18 years old or older.
+                </h1>
+            </section>
+            <div class="first-box-container">
+                <div class="count-container">
+                    <span>1</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Within the past two years, have you or a family member ever
+                            had tuberculosis of the lungs or been in close contact with a
+                            person with tuberculosis?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            b.) Do you have any physical or mental disorder that would
+                            require social and/or health services, other than medication,
+                            during a stay in Canada?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="text-area-container">
+                        <h1>
+                            c.) If you answered "yes" to question 1a) or 1b), please provide
+                            details and the name of the family member (if applicable).
+                        </h1>
+                        <textarea style="width: 100%"
+                                  id="message"
+                                  name="message"
+                                  rows="4"
+                                  cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="first-box-container" style="border-top: none">
+                <div class="count-container">
+                    <span>2</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Within the past two years, have you or a family member ever
+                            had tuberculosis of the lungs or been in close contact with a
+                            person with tuberculosis?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            b.) Have you ever been refused a visa or permit, denied entry or
+                            ordered to leave Canada or any other country or territory?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            c.) Have you previously applied to enter or remain in Canada?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="text-area-container">
+                        <h1>
+                            d.) If you answered “yes” to question 2a), 2b), or 2c) please
+                            provide details.
+                        </h1>
+                        <textarea style="width: 100%"
+                                  id="message"
+                                  name="message"
+                                  rows="4"
+                                  cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="first-box-container" style="border-top: none">
+                <div class="count-container">
+                    <span>3</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Have you ever committed, been arrested for, been charged
+                            with or convicted of any criminal offence in any country or
+                            territory?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+
+                    <div class="text-area-container">
+                        <h1>
+                            b.) If you answered “yes” to question 3a) above, please provide
+                            details.
+                        </h1>
+                        <textarea style="width: 100%"
+                                  id="message"
+                                  name="message"
+                                  rows="4"
+                                  cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-box-container" style="border-top: none">
+                <div class="count-container">
+                    <span>4</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Did you serve in any military, militia, or civil defence
+                            unit or serve in a security organization or police force
+                            (including non obligatory national service, reserve or volunteer
+                            units)?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                    <div class="text-area-container">
+                        <h1>
+                            d.) If you answered yes to question 4a), please provide dates of
+                            service and countries or territories where you served.
+                        </h1>
+                        <textarea style="width: 100%"
+                                  id="message"
+                                  name="message"
+                                  rows="4"
+                                  cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-box-container" style="border-top: none">
+                <div class="count-container">
+                    <span>5</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Are you, or have you ever been a member or associated with
+                            any political party, or other group or organization which has
+                            engaged in or advocated violence as a means to achieving a
+                            political or religious objective, or which has been associated
+                            with criminal activity at any time?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="first-box-container" style="border-top: none">
+                <div class="count-container">
+                    <span>6</span>
+                </div>
+                <div class="main-question-container">
+                    <div class="question-container" style="position: relative">
+                        <h1>
+                            a.) Have you ever witnessed or participated in the ill treatment of prisoners or civilians, looting or desecration of religious buildings?
+                        </h1>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0rem; right: 1.3rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="first-box-container" style="border-top: none">
+                <div class="text-area-container">
+                    <h1 style="padding: 0.5rem">
+                        If you answered "yes" to any of questions 3 to 6 above or upon
+                        request of a visa officer, you may be REQUIRED to fill out
+                    </h1>
+                    <textarea style="width: 100%; height: 10rem"
+                              id="last-textarea"
+                              name="message"
+                              rows="4"
+                              cols="50">
+Lorem ipsum dolor sit amet.</textarea>
+                </div>
+            </div>
+            <div class="left-footer"
+                 style="display: block; font-size: 0.525rem; float: right">
+                <p>Immigration, Refugees and Citizenship Canada</p>
+                <p>Immigration, Réfugiés et Citoyenneté Canada</p>
+            </div>
+            <div class="left-right" style="font-size: 0.525rem; padding-top: 1rem">
+                <p>IMM 1295 (06-2019) E</p>
+                <p style="font-weight: 700">
+                    APPLICATION FOR WORK PERMIT MADE OUTSIDE OF CANADA
+                </p>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="secondpage">
+            <section class="one">
+                <div>
+                    <h1>Applicant Name</h1>
+                    <span style="font-size: 0.7rem">Lorem ipsum dolor sit amet.</span>
+                </div>
+                <div>
+                    <h1 id="dob">Date of Birth</h1>
+                    <span id="dobvalue" style="font-size: 0.7rem">January 24 , 2023</span>
+                </div>
+            </section>
+            <div class="signature-form">
+                <div style="padding: 1rem">
+                    <h1>Signature</h1>
+                    <p style="padding: 0.5rem">
+                        Immigration, Refugees and Citizenship Canada (IRCC), or an
+                        organization at IRCC’ request, may want to contact you in the
+                        future to ask you about any services you received from IRCC prior
+                        to the application process (such as participation in an
+                        information forum), during the application process (including the
+                        application process itself as well as orientation or accreditation
+                        services), and services received after arriving in Canada
+                        (including settlement, integration and citizenship). IRCC will use
+                        this information, along with the information provided by other
+                        individuals, for research, performance measurement or evaluation
+                        purposes. IRCC will not use this information to make any decisions
+                        about you personally.
+                    </p>
+                    <div style="padding: 0.5rem; position: relative">
+                        <p>
+                            Do you consent to be contacted by IRCC, or an organization at
+                            IRCC’s request, in the future? (Y/N)
+                        </p>
+                        <div class="checkbox-container"
+                             style="position: absolute; top: 0.25rem; right: 18rem">
+                            <label for="yes"> Yes</label>
+                            <input type="checkbox"
+                                   checked
+                                   id="checkbox"
+                                   name="yes"
+                                   value="yes" />
+                            <label for="no"> No</label>
+                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                        </div>
+                        <p style="padding: 0.6rem 0">
+                            I consent to the release to Immigration, Refugees and
+                            Citizenship Canada (IRCC) and Canada Border Services Agency
+                            (CBSA) of all records and information for the purpose of
+                            processing my request that any government authority, including
+                            police, judicial and state authorities in all countries in which
+                            I have lived may possess about me. This information will be used
+                            to evaluate my suitability for admission to Canada or to remain
+                            in Canada pursuant to Canadian legislation.
+                        </p>
+
+                        <p style="padding: 0.6rem 0">
+                            I declare that | have answered all questions in this application
+                            fully and truthfully.
+                        </p>
+                    </div>
+                    <div style="padding: 0rem 0rem 4rem 4rem; position: relative">
+                        <p>
+                            Signature of Applicant or Parent/Legal Guardian’s for a person
+                            under 18 years of age.
+                        </p>
+                        <input style="
+                  font-size: 0.7rem;
+                  height: 2rem;
+                  padding: 0 2.3rem;
+                  width: 530px;
+                  padding-top: 0.1rem;
+                  position: absolute;
+                  left: 1.5rem;
+                "
+                               type="text"
+                               id="signature"
+                               name="signature"
+                               value="Hello World" />
+                        <div style="position: absolute; top: 0rem; right: 4rem">
+                            <p>Date: YYYY-MM-DD</p>
+                            <input style="
+                    font-size: 0.7rem;
+                    height: 2rem;
+                    padding: 0 3.2rem;
+                    width: 200px;
+                    padding-top: 0.1rem;
+                    position: absolute;
+                    right: -3rem;
+                  "
+                                   type="text"
+                                   id="signature"
+                                   name="signature"
+                                   value="Hello World" />
+                        </div>
+                    </div>
+                </div>
+
+                <div style="
+              border-top: 1px solid black;
+              padding: 1rem;
+              position: relative;
+            ">
+                    <img style="width: 4rem"
+                         src="@basesixfour"
+                        />
+                    <div style="position: absolute; top: 1rem; left: 6rem">
+                        <p style="font-weight: 700">IMPORTANT NOTE</p>
+                        <p style="font-weight: 700">
+                            This application must be signed and dated before it is submitted
+                            by mail..
+                        </p>
+                        <p>
+                            Do not forget to include photos, fees (if applicable) and any
+                            other documents required. Review the application guide for more
+                            information and verify that you have completed and provided all
+                            of the required documents as per the document checklist.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 style="font-weight: 700; padding: 1rem">Disclosure</h1>
+                <div style="border: 1px solid black; padding: 1rem">
+                    <p style="font-size: 0.75rem">
+                        Information provided to IRCC is collected under the authority of
+                        the Immigration and Refugee Protection Act (IRPA) to determine
+                        admissibility to Canada. Information provided may be shared with
+                        other Canadian government institutions such as, but not limited
+                        to, the Canada Border Services Agency (CBSA), the Royal Canadian
+                        Mounted Police (RCMP), the Canadian Security Intelligence Service
+                        (CSIS), the Department of Foreign Affairs, Trade and Development
+                        (DFATD), Employment and Social Development Canada (ESDC), the
+                        Canada Revenue Agency (CRA), provincial and territorial
+                        governments and foreign governments in accordance with subsection
+                        8(2) of the Privacy Act. Information may be disclosed to or
+                        validated with foreign governments, law enforcement bodies and
+                        detaining authorities with respect to the administration and
+                        enforcement of immigration legislation where such sharing of
+                        information may not put the individual and or his/her family at
+                        risk. Information may also be systematically validated by other
+                        Canadian government institutions for the purposes of validating
+                        status and identity to administer their programs.<br /><br />
+                        Where biometrics are provided as part of an application, the
+                        fingerprints collected will be stored and shared with the RCMP.
+                        The fingerprint record may also be disclosed to law enforcement
+                        agencies in Canada in accordance with subsection 13.11(1) of the
+                        Immigration and Refugee Protection Regulations. The information
+                        may be used to establish or verify the identity of a person in
+                        order to prevent, investigate or prosecute an offence under any
+                        law of Canada or a province. This information may also be used to
+                        establish or verify the identity of an individual whose identity
+                        cannot reasonably be otherwise established or verified because of
+                        physical or mental condition. Canada may also share immigration
+                        information related to biometric records with foreign governments
+                        with whom Canada has an agreement or arrangement.<br /><br />
+                        Depending on the type of application made, the information you
+                        provided will be stored in one or more Personal Information Banks
+                        (PIB) pursuant to section 10(1) of Canada's Privacy Act.
+                        Individuals also have a right to protection and access to their
+                        personal information stored in each corresponding PIB under the
+                        Access to Information Act. Further details on the PIBs pertaining
+                        to IRCC’s line of business and services and the Government of
+                        Canada's access to information and privacy programs are available
+                        at the
+                        <span style="
+                  font-weight: 500;
+                  color: blue;
+                  text-decoration: underline;
+                ">Infosource website</span>
+                        and through the IRCC Call Centre. Info Source is also available at
+                        public libraries across Canada.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer style="margin-top: 19.5rem">
+            <div class="left-footer"
+                 style="display: block; font-size: 0.525rem; float: right">
+                <p>Immigration, Refugees and Citizenship Canada</p>
+                <p>Immigration, Réfugiés et Citoyenneté Canada</p>
+            </div>
+            <div class="left-right" style="font-size: 0.525rem; padding-top: 1rem">
+                <p>IMM 1295 (06-2019) E</p>
+                <p style="font-weight: 700">
+                    APPLICATION FOR WORK PERMIT MADE OUTSIDE OF CANADA
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

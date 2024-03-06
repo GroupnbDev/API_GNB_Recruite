@@ -102,7 +102,14 @@ namespace nbRecruitment.Controllers
 
                 if (user != null)
                 {
-                    return Ok(user);
+                    List<String> userMenuTemp1 = _context.UserMenus.Where(x => x.UserId == user.Id && x.Status == 1).Select(x => x.MenuId.ToString()).ToList();
+
+                    List<Menu> menuListTemp1 = _context.Menus.Where(x => userMenuTemp1.Contains(x.Id.ToString())).ToList();
+
+                    List<Menu> parentTemp1 = _context.Menus.Where(x => menuListTemp1.Select(s => s.ParentId.ToString()).Contains(x.Id.ToString())).ToList();
+
+
+                    return Ok(new {user, menuListTemp1, parentTemp1 });
                 }
                 else
                 {

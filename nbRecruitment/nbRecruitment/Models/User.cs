@@ -17,9 +17,15 @@ public partial class User
 
     public string Lastname { get; set; } = null!;
 
+    public string Fullname { get; set; } = null!;
+
+    public string Fullname2 { get; set; } = null!;
+
+    public string Email { get; set; } = null!;
+
     public string Type { get; set; } = null!;
 
-    public string Sbucode { get; set; } = null!;
+    public string? Sbucode { get; set; }
 
     public int? Status { get; set; }
 

@@ -36,6 +36,8 @@ public partial class NbRecruitmentContext : DbContext
 
     public virtual DbSet<User> Users { get; set; }
 
+    public virtual DbSet<UserMenu> UserMenus { get; set; }
+
     public virtual DbSet<Userlanguage> Userlanguages { get; set; }
 
     public virtual DbSet<VLanguageRecruiter> VLanguageRecruiters { get; set; }
@@ -139,7 +141,7 @@ public partial class NbRecruitmentContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
-            entity.Property(e => e.Name).HasMaxLength(45);
+            entity.Property(e => e.Name).HasMaxLength(500);
             entity.Property(e => e.Status).HasDefaultValueSql("'1'");
         });
 
@@ -167,9 +169,9 @@ public partial class NbRecruitmentContext : DbContext
 
             entity.ToTable("menu");
 
-            entity.HasIndex(e => e.ParentId, "ParentId_UNIQUE").IsUnique();
-
-            entity.Property(e => e.CreatedDate).HasColumnType("datetime");
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("datetime");
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
             entity.Property(e => e.Name).HasMaxLength(50);
@@ -225,7 +227,10 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(255);
             entity.Property(e => e.Firstname).HasMaxLength(100);
+            entity.Property(e => e.Fullname).HasMaxLength(500);
+            entity.Property(e => e.Fullname2).HasMaxLength(500);
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
             entity.Property(e => e.Lastname).HasMaxLength(100);
             entity.Property(e => e.Middlename).HasMaxLength(100);
@@ -237,6 +242,19 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.Status).HasDefaultValueSql("'1'");
             entity.Property(e => e.Type).HasMaxLength(10);
             entity.Property(e => e.Username).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<UserMenu>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("userMenu");
+
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("datetime");
+            entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
+            entity.Property(e => e.Status).HasDefaultValueSql("'1'");
         });
 
         modelBuilder.Entity<Userlanguage>(entity =>

@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[8.0.1, )"
             },
+            "NReco.PdfGenerator": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[8.0.0, )"

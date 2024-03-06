@@ -1668,6 +1668,19 @@
           }
         }
       },
+      "NReco.PdfGenerator/1.2.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NReco.PdfGenerator.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NReco.PdfGenerator.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "NuGet.Common/6.3.1": {
         "type": "package",
         "dependencies": {
@@ -5796,6 +5809,21 @@
         "packageIcon.png"
       ]
     },
+    "NReco.PdfGenerator/1.2.1": {
+      "sha512": "YONMIaSBJO/0FKcXMyO1KZWc83IqfrbBKw5fcRxrwgxzv5r89rh/Z6r7ukuJmx+ra3m6jz6gmaEYXFWV3dKTmg==",
+      "type": "package",
+      "path": "nreco.pdfgenerator/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/NReco.PdfGenerator.dll",
+        "lib/net45/NReco.PdfGenerator.xml",
+        "lib/netstandard2.0/NReco.PdfGenerator.dll",
+        "lib/netstandard2.0/NReco.PdfGenerator.xml",
+        "nreco.pdfgenerator.1.2.1.nupkg.sha512",
+        "nreco.pdfgenerator.nuspec"
+      ]
+    },
     "NuGet.Common/6.3.1": {
       "sha512": "/WgxNyc9dXl+ZrQJDf5BXaqtMbl0CcDC5GEQITecbHZBQHApTMuxeTMMEqa0Y+PD1CIxTtbRY4jmotKS5dsLuA==",
       "type": "package",
@@ -6951,6 +6979,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.1",
+      "NReco.PdfGenerator >= 1.2.1",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -7015,6 +7044,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.1, )"
+          },
+          "NReco.PdfGenerator": {
+            "target": "Package",
+            "version": "[1.2.1, )"
           },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",

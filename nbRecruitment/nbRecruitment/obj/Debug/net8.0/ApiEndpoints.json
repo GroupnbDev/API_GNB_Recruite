@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "nbRecruitment.Controllers.CandidateController",
-    "Method": "ImageViewer",
-    "RelativePath": "api/Candidate/ImageViewer",
+    "Method": "getResumeAndAdmissibility",
+    "RelativePath": "api/Candidate/getResumeAndAdmissibility",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -19,19 +19,30 @@
     "ContainingType": "nbRecruitment.Controllers.CandidateController",
     "Method": "jobCandidates",
     "RelativePath": "api/Candidate/jobCandidates",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
+        "Name": "jobCandidatesClass",
+        "Type": "nbRecruitment.Controllers.CandidateController\u002BjobCandidatesClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "jobCandidates2",
+    "RelativePath": "api/Candidate/jobCandidates2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "jobCode",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "jobCandidatesClass",
+        "Type": "nbRecruitment.Controllers.CandidateController\u002BjobCandidatesClass",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -44,6 +55,90 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "saveJobCandidate",
+    "RelativePath": "api/Candidate/saveJobCandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "saveJobCandidateClass",
+        "Type": "nbRecruitment.Controllers.CandidateController\u002BsaveJobCandidateClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "saveJobCandidate",
+    "RelativePath": "api/Candidate/test",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.JobController",
+    "Method": "addJobType",
+    "RelativePath": "api/Job/addJobType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobtype",
+        "Type": "nbRecruitment.Models.Jobtype",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.JobController",
+    "Method": "editJobType",
+    "RelativePath": "api/Job/editJobType",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobtype",
+        "Type": "nbRecruitment.Models.Jobtype",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.JobController",
+    "Method": "jobTypeList",
+    "RelativePath": "api/Job/jobTypeList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -79,6 +174,79 @@
         "Name": "loggingin",
         "Type": "nbRecruitment.Controllers.LoginController\u002Bloggingin",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.MenuController",
+    "Method": "userList",
+    "RelativePath": "api/Menu/userList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.MenuController",
+    "Method": "userMenu",
+    "RelativePath": "api/Menu/userMenu",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.MenuController",
+    "Method": "userMenusSave",
+    "RelativePath": "api/Menu/userMenusSave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "selectedUserId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "selected",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -200,6 +368,105 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UsersController",
+    "Method": "addUser",
+    "RelativePath": "api/Users/addUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "nbRecruitment.Models.User",
+        "IsRequired": true
+      },
+      {
+        "Name": "languages",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UsersController",
+    "Method": "editUser",
+    "RelativePath": "api/Users/editUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "nbRecruitment.Models.User",
+        "IsRequired": true
+      },
+      {
+        "Name": "languages",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UsersController",
+    "Method": "laguageList",
+    "RelativePath": "api/Users/laguageList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UsersController",
+    "Method": "laguageWAsignList",
+    "RelativePath": "api/Users/laguageWAsignList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UsersController",
+    "Method": "userList",
+    "RelativePath": "api/Users/userList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
