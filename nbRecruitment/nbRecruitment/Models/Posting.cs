@@ -23,6 +23,8 @@ public partial class Posting
 
     public string Salary { get; set; } = null!;
 
+    public string Responsibility { get; set; } = null!;
+
     public string Description { get; set; } = null!;
 
     public string Requirements { get; set; } = null!;

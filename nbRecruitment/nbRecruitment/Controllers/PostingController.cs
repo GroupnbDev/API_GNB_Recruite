@@ -128,6 +128,7 @@ namespace nbRecruitment.Controllers
                        x.Currency,
                        x.Per,
                        x.Salary,
+                       x.Responsibility,
                        x.Description,
                        x.Requirements,
                        x.Type,
@@ -220,12 +221,13 @@ namespace nbRecruitment.Controllers
                 posting.Currency = newPosting.Currency;
                 posting.Per = newPosting.Per;
                 posting.Salary = posting.Salary;
+                posting.Responsibility = newPosting.Responsibility;
                 posting.Description = newPosting.Description;
                 posting.Requirements = newPosting.Requirements;
                 posting.Type = newPosting.Type;
                 posting.Status = newPosting.Status;
                 posting.ModifiedBy = newPosting.ModifiedBy;
-                posting.ModifiedDate = DateTime.Now;
+                posting.ModifiedDate = DateTime.Now;                                   
                 posting.Status = newPosting.Status;
 
                 List<AsignUser> asignUsers = _context.AsignUsers.Where(x => x.PostingId.Equals(posting.Id)).ToList();
