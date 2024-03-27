@@ -11,8 +11,6 @@ public partial class AsignUser
 
     public int UserId { get; set; }
 
-    public string LanguageCode { get; set; } = null!;
-
     public int? Status { get; set; }
 
     public int Count { get; set; }

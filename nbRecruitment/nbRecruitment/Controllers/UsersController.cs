@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using nbRecruitment.Models;
 using Newtonsoft.Json;
+using System.Text;
 using static nbRecruitment.Controllers.PostingController;
 
 namespace nbRecruitment.Controllers
@@ -124,9 +125,62 @@ namespace nbRecruitment.Controllers
                 {
                     List<string> LanguageCodes = JsonConvert.DeserializeObject<List<string>>(languages)!;
 
+                    String keySTR = "GroupNBEncry2024"; //16 byte
+                    String ivSTR = "GroupNBEncry2024"; //16 byte
+
+                    using (System.Security.Cryptography.RijndaelManaged rjm =
+                                           new System.Security.Cryptography.RijndaelManaged
+                                           {
+                                               KeySize = 128,
+                                               BlockSize = 128,
+                                               Key = ASCIIEncoding.ASCII.GetBytes(keySTR),
+                                               IV = ASCIIEncoding.ASCII.GetBytes(ivSTR)
+                                           }
+                               )
+                    {
+                        Byte[] input = Encoding.UTF8.GetBytes(user.Password);
+                        Byte[] output = rjm.CreateEncryptor().TransformFinalBlock(input, 0, input.Length);
+                        user.Password = Convert.ToBase64String(output);
+                    }
 
                     _context.Users.Add(user);
                     _context.SaveChanges();
+
+
+                    if (user.Type == "Admin")
+                    {
+
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0).Select(x => x.Id).ToList()!;
+
+                        foreach (int item in menu)
+                        {
+                            _context.UserMenus.Add(new UserMenu
+                            {
+                                MenuId = item,
+                                UserId = user.Id,
+                                CreatedBy = user.CreatedBy,
+                                CreatedDate = DateTime.Now,
+                                Status = 1
+                            });
+                        }
+
+                    }
+                    else
+                    {
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1).Select(x => x.Id).ToList()!;
+
+                        foreach (int item in menu)
+                        {
+                            _context.UserMenus.Add(new UserMenu
+                            {
+                                MenuId = item,
+                                UserId = user.Id,
+                                CreatedBy = user.CreatedBy,
+                                CreatedDate = DateTime.Now,
+                                Status = 1
+                            });
+                        }
+                    }
 
 
                     foreach (string LanguageCode in LanguageCodes)
@@ -230,6 +284,65 @@ namespace nbRecruitment.Controllers
 
                      
 
+                    }
+
+                    List<UserMenu> userMenu = _context.UserMenus.Where(x => x.UserId == user.Id).ToList()!;
+
+                    foreach (var item in userMenu)
+                    {
+                        item.Status = 0;
+                    }
+                    _context.SaveChanges();
+
+                    if (user.Type == "Admin")
+                    {
+
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0).Select(x => x.Id).ToList()!;
+
+                        foreach (int item in menu)
+                        {
+
+
+                            if (userMenu.Where(x=> x.MenuId == item).FirstOrDefault() == null)
+                            {
+                                _context.UserMenus.Add(new UserMenu
+                                {
+                                    MenuId = item,
+                                    UserId = user.Id,
+                                    CreatedBy = user.CreatedBy,
+                                    CreatedDate = DateTime.Now,
+                                    Status = 1
+                                });
+                            }
+                            else
+                            {
+                                userMenu.Where(x => x.MenuId == item).FirstOrDefault()!.Status = 1;
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1).Select(x => x.Id).ToList()!;
+
+                        foreach (int item in menu)
+                        {
+                            if (userMenu.Where(x => x.MenuId == item).FirstOrDefault() == null)
+                            {
+                                _context.UserMenus.Add(new UserMenu
+                                {
+                                    MenuId = item,
+                                    UserId = user.Id,
+                                    CreatedBy = user.CreatedBy,
+                                    CreatedDate = DateTime.Now,
+                                    Status = 1
+                                });
+                            }
+                            else
+                            {
+                                userMenu.Where(x => x.MenuId == item).FirstOrDefault()!.Status = 1;
+                            }
+                        }
                     }
                     _context.SaveChanges();
 

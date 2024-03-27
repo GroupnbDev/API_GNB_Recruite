@@ -8,170 +8,197 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet" />
+
+    <style>
+        input[type=checkbox] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            background-color: #fff;
+            border: 2px solid #aaa;
+            border-radius: 3px;
+            position: relative;
+        }
+
+            input[type=checkbox]:checked::before {
+                content: "\2713";
+                display: inline-block;
+                font-size: 10px;
+                font-size: 16px;
+                width: 16px;
+                height: 16px;
+                line-height: 10px;
+                color: #333;
+                position: absolute;
+                top: 0;
+            }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Noto Sans", sans-serif;
+        }
+
+        h1 {
+            font-size: 0.7rem;
+        }
+
+        .one {
+            border: 1px solid black;
+            height: auto;
+            padding: 0.12rem 1rem;
+            position: relative;
+        }
+
+            .one h1 {
+                font-weight: 500;
+            }
+
+        #dob {
+            position: absolute;
+            right: 1rem;
+            top: 0.25rem;
+        }
+
+        #dobvalue {
+            position: absolute;
+            right: 1rem;
+            top: 1.25rem;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        .background-info {
+            padding: 0.5rem;
+            gap: 0.25rem;
+        }
+
+            .background-info p {
+                font-weight: 600;
+            }
+
+        .first-box-container {
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .child-box-container {
+            position: relative;
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        .count-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            font-size: 0.6rem;
+            padding: 0.1rem;
+        }
+
+        .main-question-container {
+            padding: 0.5rem 0.65rem;
+            gap: 0.25rem;
+        }
+
+            .main-question-container h1 {
+                font-weight: 400;
+            }
+
+        .question-container h1 {
+            max-width: 75%;
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .text-area-container h1 {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+        }
+
+        .checkbox-container {
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+            .checkbox-container label {
+                font-size: 0.7rem;
+            }
+
+        .text-area-container {
+            gap: 0.2rem;
+        }
+
+        .border-container {
+            height: 7rem;
+            border: 1px solid black;
+        }
+
+        textarea {
+            border: 1px solid black;
+            outline: none;
+            resize: none;
+            font-size: 0.7rem;
+            height: 5rem;
+        }
+
+        #message {
+            max-width: 99%;
+        }
+
+        .last-box-container {
+            height: 10rem;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        #last-textarea {
+            border: none;
+            resize: none;
+            padding: 0.5rem;
+        }
+
+        .last-box-container .text-area-container h1 {
+            padding: 1rem;
+        }
+
+        .checkbox-container {
+            margin: auto;
+            float: left;
+        }
+
+        #checkbox {
+            position: relative;
+        }
+
+        .signature-form {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+
+            .signature-form h1 {
+                font-size: 0.75rem;
+            }
+
+            .signature-form p {
+                font-size: 0.7rem;
+            }
+    </style>
 </head>
 
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
 
-    body {
-        font-family: "Noto Sans", sans-serif;
-    }
-
-    h1 {
-        font-size: 0.7rem;
-    }
-
-    .one {
-        border: 1px solid black;
-        height: auto;
-        padding: 0.12rem 1rem;
-        position: relative;
-    }
-
-        .one h1 {
-            font-weight: 500;
-        }
-
-    #dob {
-        position: absolute;
-        right: 1rem;
-        top: 0.25rem;
-    }
-
-    #dobvalue {
-        position: absolute;
-        right: 1rem;
-        top: 1.25rem;
-    }
-
-    main {
-        width: 100%;
-    }
-
-    .background-info {
-        padding: 0.5rem;
-        gap: 0.25rem;
-    }
-
-        .background-info p {
-            font-weight: 600;
-        }
-
-    .first-box-container {
-        border: 1px solid black;
-        position: relative;
-    }
-
-    .child-box-container {
-        position: relative;
-        border-right: 1px solid black;
-        border-left: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-
-    .count-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-        font-size: 0.6rem;
-        padding: 0.1rem;
-    }
-
-    .main-question-container {
-        padding: 0.5rem 0.65rem;
-        gap: 0.25rem;
-    }
-
-        .main-question-container h1 {
-            font-weight: 400;
-        }
-
-    .question-container h1 {
-        max-width: 75%;
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
-
-    .text-area-container h1 {
-        padding-top: 0.25rem;
-        padding-bottom: 0.25rem;
-    }
-
-    .checkbox-container {
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-        .checkbox-container label {
-            font-size: 0.7rem;
-        }
-
-    .text-area-container {
-        gap: 0.2rem;
-    }
-
-    .border-container {
-        height: 7rem;
-        border: 1px solid black;
-    }
-
-    textarea {
-        border: 1px solid black;
-        outline: none;
-        resize: none;
-        font-size: 0.7rem;
-        height: 5rem;
-    }
-
-    #message {
-        max-width: 99%;
-    }
-
-    .last-box-container {
-        height: 10rem;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-
-    #last-textarea {
-        border: none;
-        resize: none;
-        padding: 0.5rem;
-    }
-
-    .last-box-container .text-area-container h1 {
-        padding: 1rem;
-    }
-
-    .checkbox-container {
-        margin: auto;
-        float: left;
-    }
-
-    #checkbox {
-        position: relative;
-    }
-
-    .signature-form {
-        border-left: 1px solid black;
-        border-right: 1px solid black;
-        border-bottom: 1px solid black;
-    }
-
-        .signature-form h1 {
-            font-size: 0.75rem;
-        }
-
-        .signature-form p {
-            font-size: 0.7rem;
-        }
-</style>
 
 <body>
     <main>
@@ -179,16 +206,16 @@
             <section class="one">
                 <div>
                     <h1>Applicant Name</h1>
-                    <span style="font-size: 0.7rem">Lorem ipsum dolor sit amet.</span>
+                    <span style="font-size: 0.7rem">{{fullname}}</span>
                 </div>
                 <div>
                     <h1 id="dob">Date of Birth</h1>
-                    <span id="dobvalue" style="font-size: 0.7rem">January 24 , 2023</span>
+                    <span id="dobvalue" style="font-size: 0.7rem">{{birthDate}}</span>
                 </div>
             </section>
             <section class="background-info">
-                <h1 style="padding: 0.25rem">Background Information</h1>
-                <h1 style="padding: 0.25rem">
+                <h1 style="padding: 0.10rem">Background Information</h1>
+                <h1 style="padding: 0.10rem">
                     You Must Complete this section if you are 18 years old or older.
                 </h1>
             </section>
@@ -207,12 +234,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{1a}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes"/>
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{1aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="question-container" style="position: relative">
@@ -225,12 +251,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{1b}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes" />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{1bb}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="text-area-container">
@@ -242,7 +267,7 @@
                                   id="message"
                                   name="message"
                                   rows="4"
-                                  cols="50"></textarea>
+                                  cols="50">{{1c}}</textarea>
                     </div>
                 </div>
             </div>
@@ -261,12 +286,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{2a}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes"/>
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{2aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="question-container" style="position: relative">
@@ -278,12 +302,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{2b}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes"/>
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{2bb}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="question-container" style="position: relative">
@@ -294,12 +317,12 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{2c}}
                                    id="checkbox"
                                    name="yes"
-                                   value="yes" />
+                                    />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{2cc}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="text-area-container">
@@ -311,7 +334,7 @@
                                   id="message"
                                   name="message"
                                   rows="4"
-                                  cols="50"></textarea>
+                                  cols="50">{{2d}}</textarea>
                     </div>
                 </div>
             </div>
@@ -330,12 +353,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{3a}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes" />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{3aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
 
@@ -348,7 +370,7 @@
                                   id="message"
                                   name="message"
                                   rows="4"
-                                  cols="50"></textarea>
+                                  cols="50">{{3b}}</textarea>
                     </div>
                 </div>
             </div>
@@ -369,12 +391,11 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{4a}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes"  />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{4aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                     <div class="text-area-container">
@@ -386,7 +407,7 @@
                                   id="message"
                                   name="message"
                                   rows="4"
-                                  cols="50"></textarea>
+                                  cols="50">{{4b}}</textarea>
                     </div>
                 </div>
             </div>
@@ -408,12 +429,12 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{5a}}
                                    id="checkbox"
                                    name="yes"
-                                   value="yes" />
+                                    />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{5aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                 </div>
@@ -431,12 +452,12 @@
                              style="position: absolute; top: 0rem; right: 1.3rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                   {{6a}}
                                    id="checkbox"
                                    name="yes"
-                                   value="yes" />
+                                   />
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{6aa}} type="checkbox" id="checkbox" name="no" />
                         </div>
                     </div>
                 </div>
@@ -451,8 +472,7 @@
                               id="last-textarea"
                               name="message"
                               rows="4"
-                              cols="50">
-Lorem ipsum dolor sit amet.</textarea>
+                              cols="30">{{6b}}</textarea>
                 </div>
             </div>
             <div class="left-footer"
@@ -467,22 +487,15 @@ Lorem ipsum dolor sit amet.</textarea>
                 </p>
             </div>
         </div>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <div id="secondpage">
             <section class="one">
                 <div>
                     <h1>Applicant Name</h1>
-                    <span style="font-size: 0.7rem">Lorem ipsum dolor sit amet.</span>
+                    <span style="font-size: 0.7rem">{{fullname}}</span>
                 </div>
                 <div>
                     <h1 id="dob">Date of Birth</h1>
-                    <span id="dobvalue" style="font-size: 0.7rem">January 24 , 2023</span>
+                    <span id="dobvalue" style="font-size: 0.7rem">{{birthDate}}</span>
                 </div>
             </section>
             <div class="signature-form">
@@ -511,12 +524,11 @@ Lorem ipsum dolor sit amet.</textarea>
                              style="position: absolute; top: 0.25rem; right: 18rem">
                             <label for="yes"> Yes</label>
                             <input type="checkbox"
-                                   checked
+                                    {{6c}}
                                    id="checkbox"
-                                   name="yes"
-                                   value="yes" />
+                                   name="yes"/>
                             <label for="no"> No</label>
-                            <input type="checkbox" id="checkbox" name="no" value="no" />
+                            <input {{6cc}} type="checkbox" id="checkbox" name="no" />
                         </div>
                         <p style="padding: 0.6rem 0">
                             I consent to the release to Immigration, Refugees and
@@ -551,7 +563,7 @@ Lorem ipsum dolor sit amet.</textarea>
                                type="text"
                                id="signature"
                                name="signature"
-                               value="Hello World" />
+                               value="" />
                         <div style="position: absolute; top: 0rem; right: 4rem">
                             <p>Date: YYYY-MM-DD</p>
                             <input style="
@@ -566,7 +578,7 @@ Lorem ipsum dolor sit amet.</textarea>
                                    type="text"
                                    id="signature"
                                    name="signature"
-                                   value="Hello World" />
+                                   value="" />
                         </div>
                     </div>
                 </div>
@@ -649,7 +661,7 @@ Lorem ipsum dolor sit amet.</textarea>
                 </div>
             </div>
         </div>
-        <footer style="margin-top: 19.5rem">
+        <footer style="margin-top: 14rem">
             <div class="left-footer"
                  style="display: block; font-size: 0.525rem; float: right">
                 <p>Immigration, Refugees and Citizenship Canada</p>

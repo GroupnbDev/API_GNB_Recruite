@@ -65,7 +65,7 @@ namespace nbRecruitment.Controllers
                 }
             }
         }
-
+     
         public partial class loggingin
         {
             public string password { get; set; }
@@ -97,16 +97,32 @@ namespace nbRecruitment.Controllers
                 }
 
 
-                User user = _context.Users.Where(x => x.Username == loggingin.username && x.Password == loggingin.password).FirstOrDefault();
+                var user = _context.Users.Where(x => x.Username == loggingin.username && x.Password == loggingin.password).Select(
+                    x => new
+                    {
+                        x.Id,
+                        x.Username,
+                        x.Firstname,
+                        x.Middlename,
+                        x.Lastname,
+                        x.Email,
+                        x.CreatedBy,
+                        x.CreatedDate,
+                        x.Fullname,
+                        x.Fullname2,
+                        x.Type,
+                        x.Sbucode
+                    }
+                    ).FirstOrDefault();
 
 
                 if (user != null)
                 {
                     List<String> userMenuTemp1 = _context.UserMenus.Where(x => x.UserId == user.Id && x.Status == 1).Select(x => x.MenuId.ToString()).ToList();
 
-                    List<Menu> menuListTemp1 = _context.Menus.Where(x => userMenuTemp1.Contains(x.Id.ToString())).ToList();
+                    List<Menu> menuListTemp1 = _context.Menus.Where(x => userMenuTemp1.Contains(x.Id.ToString())).OrderBy(x => x.Sort).ToList();
 
-                    List<Menu> parentTemp1 = _context.Menus.Where(x => menuListTemp1.Select(s => s.ParentId.ToString()).Contains(x.Id.ToString())).ToList();
+                    List<Menu> parentTemp1 = _context.Menus.Where(x => menuListTemp1.Select(s => s.ParentId.ToString()).Contains(x.Id.ToString())).OrderBy(x =>x.Sort).ToList();
 
 
                     return Ok(new {user, menuListTemp1, parentTemp1 });

@@ -19,13 +19,15 @@ public partial class Candidate
 
     public string Lastname { get; set; } = null!;
 
+    public DateOnly DateOfBirth { get; set; }
+
     public string Email { get; set; } = null!;
 
     public sbyte Polo { get; set; }
 
-    public string Currency { get; set; } = null!;
+    public int NumCode { get; set; }
 
-    public int Salary { get; set; }
+    public string Num { get; set; } = null!;
 
     public string Country { get; set; } = null!;
 
@@ -48,4 +50,8 @@ public partial class Candidate
     public int? ModifiedBy { get; set; }
 
     public DateTime? ModifiedDate { get; set; }
+
+    public string Nationality { get; set; } = null!;
+
+    public string? CurrentResidingAddress { get; set; }
 }

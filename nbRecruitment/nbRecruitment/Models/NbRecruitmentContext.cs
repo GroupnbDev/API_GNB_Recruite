@@ -40,8 +40,6 @@ public partial class NbRecruitmentContext : DbContext
 
     public virtual DbSet<Userlanguage> Userlanguages { get; set; }
 
-    public virtual DbSet<VLanguageRecruiter> VLanguageRecruiters { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseMySql("host=97.74.83.143;database=nb_recruitment;username=gnb;password=gnb2023", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.34-mysql"));
@@ -72,6 +70,7 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e._5a).HasColumnName("5a");
             entity.Property(e => e._6a).HasColumnName("6a");
             entity.Property(e => e._6b).HasColumnName("6b");
+            entity.Property(e => e._6c).HasColumnName("6c");
         });
 
         modelBuilder.Entity<AsignUser>(entity =>
@@ -82,7 +81,6 @@ public partial class NbRecruitmentContext : DbContext
 
             entity.HasIndex(e => e.UserId, "userId_idx");
 
-            entity.Property(e => e.LanguageCode).HasMaxLength(45);
             entity.Property(e => e.Status).HasDefaultValueSql("'1'");
         });
 
@@ -96,7 +94,6 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("datetime");
-            entity.Property(e => e.Currency).HasMaxLength(500);
             entity.Property(e => e.CurrentCountry).HasMaxLength(45);
             entity.Property(e => e.Email).HasMaxLength(500);
             entity.Property(e => e.Firstname).HasMaxLength(45);
@@ -107,6 +104,8 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.Lastname).HasMaxLength(45);
             entity.Property(e => e.Middlename).HasMaxLength(45);
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
+            entity.Property(e => e.Nationality).HasMaxLength(100);
+            entity.Property(e => e.Num).HasMaxLength(45);
             entity.Property(e => e.Status).HasDefaultValueSql("'1'");
             entity.Property(e => e.StatusDescription).HasMaxLength(45);
         });
@@ -184,6 +183,7 @@ public partial class NbRecruitmentContext : DbContext
 
             entity.ToTable("posting");
 
+            entity.Property(e => e.ClientName).HasMaxLength(1000);
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("datetime");
@@ -191,7 +191,6 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
             entity.Property(e => e.JobCode).HasMaxLength(45);
             entity.Property(e => e.JobType).HasMaxLength(45);
-            entity.Property(e => e.LanguageCodes).HasMaxLength(200);
             entity.Property(e => e.Location).HasMaxLength(500);
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
             entity.Property(e => e.Per).HasMaxLength(45);
@@ -268,21 +267,6 @@ public partial class NbRecruitmentContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.LangCode).HasMaxLength(45);
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
-        });
-
-        modelBuilder.Entity<VLanguageRecruiter>(entity =>
-        {
-            entity
-                .HasNoKey()
-                .ToView("v_LanguageRecruiter");
-
-            entity.Property(e => e.Firstname).HasMaxLength(100);
-            entity.Property(e => e.Fullname).HasMaxLength(203);
-            entity.Property(e => e.LangCode).HasMaxLength(45);
-            entity.Property(e => e.Lastname).HasMaxLength(100);
-            entity.Property(e => e.Middlename).HasMaxLength(100);
-            entity.Property(e => e.Name).HasMaxLength(45);
-            entity.Property(e => e.Status).HasDefaultValueSql("'1'");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -453,3 +453,7 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\nbRecruitment.pdb
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\nbRecruitment.genruntimeconfig.cache
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\ref\nbRecruitment.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\DinkToPdf.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\BouncyCastle.Cryptography.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\MailKit.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\MimeKit.dll

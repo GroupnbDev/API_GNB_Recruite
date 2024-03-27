@@ -36,4 +36,6 @@ public partial class Admissibility
     public sbyte _6a { get; set; }
 
     public string? _6b { get; set; }
+
+    public sbyte _6c { get; set; }
 }

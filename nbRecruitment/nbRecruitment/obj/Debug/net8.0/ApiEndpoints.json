@@ -1,8 +1,81 @@
 [
   {
     "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "availableTransfer",
+    "RelativePath": "api/Candidate/availableTransfer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "emailCandidate",
+    "RelativePath": "api/Candidate/emailCandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidateEmail",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "JobType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "link",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "fileContent",
+    "RelativePath": "api/Candidate/fileContent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidateId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileType",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "fileList",
+    "RelativePath": "api/Candidate/fileList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidateId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
     "Method": "getResumeAndAdmissibility",
-    "RelativePath": "api/Candidate/getResumeAndAdmissibility",
+    "RelativePath": "api/Candidate/getAdmissibility",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,6 +83,22 @@
       {
         "Name": "candidateId",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "getResume",
+    "RelativePath": "api/Candidate/getResume",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidateId",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],
@@ -49,12 +138,60 @@
   },
   {
     "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "jobCandidatesDialog",
+    "RelativePath": "api/Candidate/jobCandidatesDialog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobCandidatesDialogClass",
+        "Type": "nbRecruitment.Controllers.CandidateController\u002BjobCandidatesDialogClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "jobCandidatesDialog2",
+    "RelativePath": "api/Candidate/jobCandidatesDialog2",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jobCandidatesDialogClass",
+        "Type": "nbRecruitment.Controllers.CandidateController\u002BjobCandidatesDialogClass",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
     "Method": "jobTypeList",
     "RelativePath": "api/Candidate/jobTypeList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.CandidateController",
+    "Method": "multipleEmailCandidate",
+    "RelativePath": "api/Candidate/multipleEmailCandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "details",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -75,9 +212,103 @@
   },
   {
     "ContainingType": "nbRecruitment.Controllers.CandidateController",
-    "Method": "saveJobCandidate",
-    "RelativePath": "api/Candidate/test",
+    "Method": "transfer",
+    "RelativePath": "api/Candidate/transfer",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "candidateId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "transferTo",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.DashboardController",
+    "Method": "candidatesProgression",
+    "RelativePath": "api/Dashboard/candidatesProgression",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "from",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "to",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.DashboardController",
+    "Method": "openPosition",
+    "RelativePath": "api/Dashboard/openPosition",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "PostingId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.DashboardController",
+    "Method": "regCandidates",
+    "RelativePath": "api/Dashboard/regCandidates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Dates",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.ErpController",
+    "Method": "candidates",
+    "RelativePath": "api/Erp/candidates",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -119,6 +350,64 @@
     "ContainingType": "nbRecruitment.Controllers.JobController",
     "Method": "jobTypeList",
     "RelativePath": "api/Job/jobTypeList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.LanguageController",
+    "Method": "addLanguage",
+    "RelativePath": "api/Language/addLanguage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "nbRecruitment.Models.Language",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.LanguageController",
+    "Method": "editLanguage",
+    "RelativePath": "api/Language/editLanguage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "language",
+        "Type": "nbRecruitment.Models.Language",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.LanguageController",
+    "Method": "languageList",
+    "RelativePath": "api/Language/languageList",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -252,6 +541,105 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "nbRecruitment.Controllers.NotificationController",
+    "Method": "NotificationList",
+    "RelativePath": "api/Notification/NotificationList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PostController",
+    "Method": "addCandidate",
+    "RelativePath": "api/Post/addCandidate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "admissibility",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "posting",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PostController",
+    "Method": "country",
+    "RelativePath": "api/Post/country",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PostController",
+    "Method": "getDir",
+    "RelativePath": "api/Post/getDir",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "toCombine",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "nbRecruitment.Controllers.PostController",
     "Method": "post",
     "RelativePath": "api/Post/post",
@@ -331,6 +719,22 @@
   },
   {
     "ContainingType": "nbRecruitment.Controllers.PostingController",
+    "Method": "lanJobE",
+    "RelativePath": "api/Posting/lanJobE",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PostingController",
     "Method": "postingList",
     "RelativePath": "api/Posting/postingList",
     "HttpMethod": "POST",
@@ -361,13 +765,117 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "nbRecruitment.Controllers.PostingController",
-    "Method": "userLanguage",
-    "RelativePath": "api/Posting/userLanguage",
-    "HttpMethod": "GET",
+    "ContainingType": "nbRecruitment.Controllers.ProfileController",
+    "Method": "changePassword",
+    "RelativePath": "api/Profile/changePassword",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "currentPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.ProfileController",
+    "Method": "ProfileDetails",
+    "RelativePath": "api/Profile/ProfileDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "classProfileDetails",
+        "Type": "nbRecruitment.Controllers.ProfileController\u002BclassProfileDetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UploadController",
+    "Method": "checkFilesCandidates",
+    "RelativePath": "api/Upload/checkFilesCandidates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fileType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "candidateId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.UploadController",
+    "Method": "uploadFilesCandidates",
+    "RelativePath": "api/Upload/uploadFilesCandidates",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "fileType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "candidateId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

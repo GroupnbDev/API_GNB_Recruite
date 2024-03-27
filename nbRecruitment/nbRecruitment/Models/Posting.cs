@@ -11,8 +11,6 @@ public partial class Posting
 
     public string JobType { get; set; } = null!;
 
-    public string LanguageCodes { get; set; } = null!;
-
     public int PositionCount { get; set; }
 
     public string Location { get; set; } = null!;
@@ -42,4 +40,8 @@ public partial class Posting
     public int? ModifiedBy { get; set; }
 
     public DateTime? ModifiedDate { get; set; }
+
+    public int ClientId { get; set; }
+
+    public string ClientName { get; set; } = null!;
 }

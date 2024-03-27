@@ -236,7 +236,10 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitme
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.runtimeconfig.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.pdb
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Humanizer.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\DinkToPdf.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\MailKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.Build.dll
@@ -268,6 +271,7 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.V
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\MimeKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\MySqlConnector.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Newtonsoft.Json.dll
@@ -461,4 +465,3 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Debug\net8.0\refint\nbRe
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Debug\net8.0\nbRecruitment.pdb
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Debug\net8.0\nbRecruitment.genruntimeconfig.cache
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Debug\net8.0\ref\nbRecruitment.dll
-C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\NReco.PdfGenerator.dll

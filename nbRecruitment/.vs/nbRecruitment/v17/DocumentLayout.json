@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\erpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\erpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\models\\nbrecruitmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\models\\nbrecruitmentcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\postingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +34,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAgwEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T21:35:05.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NbRecruitmentContext.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "RelativeToolTip": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T21:23:09.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Program.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Program.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Program.cs",
+              "RelativeToolTip": "nbRecruitment\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T21:04:48.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
@@ -43,79 +86,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NbRecruitmentContext.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Models\\NbRecruitmentContext.cs",
-              "RelativeToolTip": "nbRecruitment\\Models\\NbRecruitmentContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAA8AAAA",
+              "Title": "ErpController.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\ErpController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\ErpController.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\ErpController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\ErpController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAADwvyIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T01:23:48.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostingController.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\PostingController.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
-              "RelativeToolTip": "nbRecruitment\\Controllers\\PostingController.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAmwHcAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T01:07:59.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MenuController.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\MenuController.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\MenuController.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\MenuController.cs",
-              "RelativeToolTip": "nbRecruitment\\Controllers\\MenuController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAowEQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T07:42:39.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "nbRecruitment\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAIwHwAAABpAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T08:46:47.358Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CandidateController.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\CandidateController.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
-              "RelativeToolTip": "nbRecruitment\\Controllers\\CandidateController.cs",
-              "ViewState": "AQIAAB4BAAAAAAAAAAD4v0ABAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-27T05:17:23.14Z",
+              "WhenOpened": "2024-03-27T20:37:12.061Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "PostingController.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\PostingController.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostingController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\PostingController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowFEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-27T19:16:32.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "PostController.cs",
               "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostController.cs",
               "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\PostController.cs",
               "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\PostController.cs",
               "RelativeToolTip": "nbRecruitment\\Controllers\\PostController.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA1wBgAAAAZAAAA",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAIwJcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-22T12:17:46.931Z"
+              "WhenOpened": "2024-03-27T19:10:14.105Z",
+              "EditorCaption": ""
             }
           ]
         }

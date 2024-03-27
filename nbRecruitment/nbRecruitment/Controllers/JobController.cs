@@ -111,7 +111,7 @@ namespace nbRecruitment.Controllers
                     checker.ModifiedBy = jobtype.ModifiedBy;
                     checker.ModifiedDate = DateTime.Now; 
                     _context.SaveChanges();
-                    return Ok("Added Succesfully!");
+                    return Ok("Saved Succesfully!");
                 }
                 else
                 {

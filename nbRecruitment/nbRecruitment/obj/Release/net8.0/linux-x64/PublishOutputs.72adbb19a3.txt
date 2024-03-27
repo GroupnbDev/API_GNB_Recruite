@@ -4,7 +4,10 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\nbRecruitment.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\nbRecruitment.runtimeconfig.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\nbRecruitment.pdb
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\BouncyCastle.Cryptography.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Humanizer.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\DinkToPdf.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\MailKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Build.dll
@@ -35,6 +38,7 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\MimeKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Mono.TextTemplating.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\MySqlConnector.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\obj\Release\net8.0\linux-x64\PubTmp\Out\Newtonsoft.Json.dll
