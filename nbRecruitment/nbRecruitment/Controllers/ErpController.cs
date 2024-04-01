@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using nbRecruitment.Models;
 using nbRecruitment.ModelsERP;
+using System.Diagnostics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using User = nbRecruitment.Models.User;
 
@@ -44,7 +45,9 @@ namespace nbRecruitment.Controllers
                         x.Nationality,
                         Client = _context.Postings.Where(i => i.Id == x.PostingId).Select(i => i.ClientName).FirstOrDefault(),
                         Number = x.Num,
-                        x.Email
+                        x.Email,
+                        ProcessedBy = _context.Users.Where(i => i.Id == x.AsignTo).
+                        Select(i => i.Middlename == null ? $"{i.Firstname} {i.Lastname}" : $"{i.Firstname} {i.Middlename} {i.Lastname}").FirstOrDefault()
 
 
                     }

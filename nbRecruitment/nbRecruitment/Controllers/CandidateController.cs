@@ -671,7 +671,7 @@ namespace nbRecruitment.Controllers
             try
             {
                  //string resumePath = "C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite//" + candidateId + ".pdf";
-                string resumePath = "/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/" + candidateId + "/Resume.pdf";
+                string resumePath = "/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidateId + "/Resume.pdf";
 
                 if (!System.IO.File.Exists(resumePath))
                 {
@@ -936,7 +936,7 @@ namespace nbRecruitment.Controllers
         {
             try
             {
-                string directoryPath = "/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/" + candidateId;
+                string directoryPath = "/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidateId;
                 // Check if the directory exists
                 if (Directory.Exists(directoryPath))
                 {
@@ -996,7 +996,7 @@ namespace nbRecruitment.Controllers
         {
             try
             {
-                string directoryPath = "/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/" + candidateId + "/" + fileType;
+                string directoryPath = "/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidateId + "/" + fileType;
 
                 if (!System.IO.File.Exists(directoryPath))
                 {

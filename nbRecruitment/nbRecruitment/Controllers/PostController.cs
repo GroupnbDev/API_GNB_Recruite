@@ -191,7 +191,7 @@ namespace nbRecruitment.Controllers
 
                 string fileName = file.FileName + ".pdf";
                 string fileextention = Path.GetExtension(fileName);
-                 string uploadpath = Path.Combine("/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/"+ candidate.Id +"/");
+                 string uploadpath = Path.Combine("/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidate.Id +"/");
                 //string uploadpath = Path.Combine("C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite\\resume");
                 if (!Directory.Exists(uploadpath))
                 {

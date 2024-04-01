@@ -36,7 +36,7 @@ namespace nbRecruitment.Controllers
 
                 }
                 // string fileName = file.FileName + ".pdf";
-                string uploadpath = "/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/" + candidateId + "/";
+                string uploadpath = "/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidateId + "/";
                 //string uploadpath = Path.Combine("C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite\\"+ candidateId+"//");
                 //string uploadpath = Path.Combine("C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite\\resume");
                 if (!Directory.Exists(uploadpath))
@@ -70,7 +70,7 @@ namespace nbRecruitment.Controllers
         {
             try
             {
-                string uploadpath = Path.Combine("/home/groupnb/go/src/github.com/dafalo/GNBRecruitementFiles/" + candidateId + "/" + fileType + ".pdf");
+                string uploadpath = Path.Combine("/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidateId + "/" + fileType + ".pdf");
                 //string uploadpath = Path.Combine("C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite\\" + candidateId + "//"+ fileType + ".pdf");
                 //string uploadpath = Path.Combine("C:\\Users\\MarkJearoneFAlvarez\\Pictures\\gnbRecruite\\resume");
                 if (System.IO.File.Exists(uploadpath))

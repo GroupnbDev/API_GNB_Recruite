@@ -49,8 +49,9 @@ namespace nbRecruitment.Controllers
                         x.CurrentCountry,
                         CountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
                         CurrentCountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
-                        x.IsViewed
-                    }).ToList();
+                        x.IsViewed,
+                        x.CreatedDate
+                    }).OrderBy(x => x.CreatedDate).ToList();
 
                 if (candidate.Count() == 0)
                 {
