@@ -11,9 +11,11 @@ public partial class Candidate
 
     public ulong? UserId { get; set; }
 
-    public string? Admin { get; set; }
+    public string? Recruiter { get; set; }
 
-    public string? Sex { get; set; }
+    public string? CanId { get; set; }
+
+    public string? Admin { get; set; }
 
     public string? Name { get; set; }
 
@@ -29,11 +31,15 @@ public partial class Candidate
 
     public string? Employer { get; set; }
 
+    public string? Accomdation { get; set; }
+
+    public string? Old { get; set; }
+
     public string? Number { get; set; }
 
     public string? Email { get; set; }
 
-    public string? Permit { get; set; }
+    public string? Reason { get; set; }
 
     public string? Resident { get; set; }
 
@@ -71,6 +77,8 @@ public partial class Candidate
 
     public string? Status { get; set; }
 
+    public string? TeamsLink { get; set; }
+
     public string? Bio { get; set; }
 
     public string? Med { get; set; }
@@ -80,14 +88,6 @@ public partial class Candidate
     public string? Driver { get; set; }
 
     public string? Expiration { get; set; }
-
-    public string? Settle { get; set; }
-
-    public string? Image { get; set; }
-
-    public string? LastUpdate { get; set; }
-
-    public DateTime? Deleted { get; set; }
 
     public string? SettlementBy { get; set; }
 
@@ -107,6 +107,10 @@ public partial class Candidate
 
     public string? Ticket { get; set; }
 
+    public string? Settle { get; set; }
+
+    public string? Image { get; set; }
+
     public string? ArrivalDate { get; set; }
 
     public string? Starting { get; set; }
@@ -121,7 +125,17 @@ public partial class Candidate
 
     public string? Handbook { get; set; }
 
-    public string? TeamsLink { get; set; }
+    public string? Notif1 { get; set; }
+
+    public string? Notif2 { get; set; }
+
+    public string? Notif3 { get; set; }
+
+    public string? Process { get; set; }
+
+    public string? LastUpdate { get; set; }
+
+    public DateTime? Deleted { get; set; }
 
     public virtual Position? Position { get; set; }
 

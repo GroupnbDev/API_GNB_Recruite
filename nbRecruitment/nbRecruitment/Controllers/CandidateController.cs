@@ -114,10 +114,8 @@ namespace nbRecruitment.Controllers
                         x.Polo,
                         x.Num,
                         x.NumCode,
-                        x.Country,
-                        x.CurrentCountry,
-                        CountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
-                        CurrentCountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
+                        x.CurrentResidingAddress,
+                        x.Nationality,
                         x.IsViewed
                     }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
@@ -147,10 +145,8 @@ namespace nbRecruitment.Controllers
                         x.Polo,
                         x.Num,
                         x.NumCode,
-                        x.Country,
-                        x.CurrentCountry,
-                        CountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
-                        CurrentCountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
+                        x.CurrentResidingAddress,
+                        x.Nationality,
                         x.IsViewed
                     }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
@@ -228,10 +224,8 @@ namespace nbRecruitment.Controllers
                     x.Polo,
                     x.Num,
                     x.NumCode,
-                    x.Country,
-                    x.CurrentCountry,
-                    CountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
-                    CurrentCountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
+                    x.CurrentResidingAddress,
+                    x.Nationality,
                     x.IsViewed
                 }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
@@ -261,10 +255,8 @@ namespace nbRecruitment.Controllers
                     x.Polo,
                     x.Num,
                     x.NumCode,
-                    x.Country,
-                    x.CurrentCountry,
-                    CountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
-                    CurrentCountryName = _context.Countries.Where(i => i.Code == x.Country).Select(i => i.Name).FirstOrDefault(),
+                    x.CurrentResidingAddress,
+                    x.Nationality,
                     x.IsViewed
                 }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
@@ -505,6 +497,22 @@ namespace nbRecruitment.Controllers
                 candidate.Polo = saveJobCandidateClass.polo;
                 candidate.ModifiedBy = saveJobCandidateClass.modifiedBy;
                 candidate.ModifiedDate = DateTime.Now;
+
+                if(saveJobCandidateClass.statusDescription == "Not Selected")
+                {
+
+                    string directoryPath = "/home/groupnb/go/src/github.com/dafalo/AppNBRecruitment/GNBRecruitementFiles/" + candidate.Id; 
+                    string[] files = Directory.GetFiles(directoryPath);
+
+                    foreach (string file in files)
+                    {
+                        if (Path.GetFileName(file) != "Resume.pdf")
+                        {
+                            System.IO.File.Delete(file);
+                        }
+                    }
+
+                }
 
                 _context.SaveChanges();
 
@@ -1025,6 +1033,8 @@ namespace nbRecruitment.Controllers
                 }
             }
         }
+
+     
 
     }
 }

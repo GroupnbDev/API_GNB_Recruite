@@ -34,6 +34,8 @@ public partial class NbRecruitmentContext : DbContext
 
     public virtual DbSet<Sbu> Sbus { get; set; }
 
+    public virtual DbSet<SelectedCandidateNotInErp> SelectedCandidateNotInErps { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UserMenu> UserMenus { get; set; }
@@ -90,11 +92,9 @@ public partial class NbRecruitmentContext : DbContext
 
             entity.ToTable("candidates");
 
-            entity.Property(e => e.Country).HasMaxLength(45);
             entity.Property(e => e.CreatedDate)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("datetime");
-            entity.Property(e => e.CurrentCountry).HasMaxLength(45);
             entity.Property(e => e.Email).HasMaxLength(500);
             entity.Property(e => e.Firstname).HasMaxLength(45);
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
@@ -189,6 +189,7 @@ public partial class NbRecruitmentContext : DbContext
                 .HasColumnType("datetime");
             entity.Property(e => e.Currency).HasMaxLength(45);
             entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
+            entity.Property(e => e.IsPending).HasDefaultValueSql("'1'");
             entity.Property(e => e.JobCode).HasMaxLength(45);
             entity.Property(e => e.JobType).HasMaxLength(45);
             entity.Property(e => e.Location).HasMaxLength(500);
@@ -215,6 +216,30 @@ public partial class NbRecruitmentContext : DbContext
             entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
             entity.Property(e => e.Name).HasMaxLength(100);
             entity.Property(e => e.Status).HasDefaultValueSql("'1'");
+        });
+
+        modelBuilder.Entity<SelectedCandidateNotInErp>(entity =>
+        {
+            entity
+                .HasNoKey()
+                .ToView("selectedCandidateNotInERP");
+
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(500);
+            entity.Property(e => e.Firstname).HasMaxLength(45);
+            entity.Property(e => e.IsDelete).HasDefaultValueSql("'0'");
+            entity.Property(e => e.IsViewed).HasDefaultValueSql("'0'");
+            entity.Property(e => e.JobCode).HasMaxLength(45);
+            entity.Property(e => e.LastStatusDescription).HasMaxLength(45);
+            entity.Property(e => e.Lastname).HasMaxLength(45);
+            entity.Property(e => e.Middlename).HasMaxLength(45);
+            entity.Property(e => e.ModifiedDate).HasColumnType("datetime");
+            entity.Property(e => e.Nationality).HasMaxLength(100);
+            entity.Property(e => e.Num).HasMaxLength(45);
+            entity.Property(e => e.Status).HasDefaultValueSql("'1'");
+            entity.Property(e => e.StatusDescription).HasMaxLength(45);
         });
 
         modelBuilder.Entity<User>(entity =>

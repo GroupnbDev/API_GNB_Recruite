@@ -19,10 +19,6 @@ public partial class Profile
 
     public string? Image { get; set; }
 
-    public string? LastUpdate { get; set; }
-
-    public DateTime? Deleted { get; set; }
-
     public string? File1 { get; set; }
 
     public string? File2 { get; set; }
@@ -34,6 +30,10 @@ public partial class Profile
     public string? File5 { get; set; }
 
     public string? File6 { get; set; }
+
+    public string? LastUpdate { get; set; }
+
+    public DateTime? Deleted { get; set; }
 
     public virtual ICollection<Candidate> Candidates { get; set; } = new List<Candidate>();
 

@@ -167,7 +167,7 @@ namespace nbRecruitment.Controllers
                     }
                     else
                     {
-                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1).Select(x => x.Id).ToList()!;
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1 && x.Id != 10).Select(x => x.Id).ToList()!;
 
                         foreach (int item in menu)
                         {
@@ -323,7 +323,7 @@ namespace nbRecruitment.Controllers
                     }
                     else
                     {
-                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1).Select(x => x.Id).ToList()!;
+                        List<int> menu = _context.Menus.Where(x => x.Status == 1 && x.IsDelete == 0 && x.ParentId != 0 && x.ParentId == 1 && x.Id != 10).Select(x => x.Id).ToList()!;
 
                         foreach (int item in menu)
                         {

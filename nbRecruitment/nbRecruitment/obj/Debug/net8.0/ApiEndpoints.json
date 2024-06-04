@@ -305,6 +305,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "nbRecruitment.Controllers.DashboardController",
+    "Method": "test",
+    "RelativePath": "api/Dashboard/test",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "nbRecruitment.Controllers.ErpController",
     "Method": "candidates",
     "RelativePath": "api/Erp/candidates",
@@ -312,6 +322,38 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.ErpController",
+    "Method": "erpSendEmail",
+    "RelativePath": "api/Erp/erpSendEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "details",
+        "Type": "nbRecruitment.Controllers.ErpController\u002Bdetails",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.ErpController",
+    "Method": "setStatus",
+    "RelativePath": "api/Erp/setStatus",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidateId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -557,6 +599,53 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "nbRecruitment.Controllers.PendingController",
+    "Method": "approved",
+    "RelativePath": "api/Pending/approved",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "isApproved",
+        "Type": "System.SByte",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PendingController",
+    "Method": "postingList",
+    "RelativePath": "api/Pending/postingList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "nbRecruitment.Controllers.PostController",
     "Method": "addCandidate",
     "RelativePath": "api/Post/addCandidate",
@@ -617,6 +706,22 @@
     "Parameters": [
       {
         "Name": "postingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "nbRecruitment.Controllers.PostController",
+    "Method": "directPost",
+    "RelativePath": "api/Post/directPost",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
         "Type": "System.Int32",
         "IsRequired": false
       }

@@ -246,6 +246,29 @@ namespace nbRecruitment.Controllers
                         });
                     }
                 }
+                if (item[6] == true)
+                {
+                    UserMenu userMenu = _context.UserMenus.Where(x => x.UserId == selectedUserId && x.MenuId == 10).FirstOrDefault();
+
+                    if (userMenu != null)
+                    {
+                        userMenu.Status = 1;
+                        userMenu.ModifiedBy = userId;
+                        userMenu.ModifiedDate = DateTime.Now;
+                    }
+                    else
+                    {
+                        _context.UserMenus.Add(new UserMenu
+                        {
+                            MenuId = 10,
+                            UserId = selectedUserId,
+                            Status = 1,
+                            CreatedBy = userId,
+                            CreatedDate = DateTime.Now
+
+                        });
+                    }
+                }
                 _context.SaveChanges();
                 return Ok("Successfully Change!");
 

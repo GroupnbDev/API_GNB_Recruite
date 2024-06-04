@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using nbRecruitment.Hubs.SignalRChat.Hubs;
 using nbRecruitment.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,22 +17,51 @@ namespace nbRecruitment.Controllers
 
         private readonly NbRecruitmentContext _context;
         private readonly IConfiguration _configuration;
+        private readonly IHubContext<ChatHub> _chatHubContext;
 
 
-        public DashboardController(NbRecruitmentContext context, IConfiguration configuration)
+        public DashboardController(NbRecruitmentContext context, IConfiguration configuration, IHubContext<ChatHub> chatHubContext)
         {
             _context = context;
             _configuration = configuration;
             //    _pdfConverter = pdfConverter;
+            _chatHubContext = chatHubContext;
         }
 
+       
+
+
+        [HttpGet("test")]
+        public async Task<ActionResult> test()
+        {
+            try
+            {
+
+                await _chatHubContext.Clients.All.SendAsync("ReceiveMessage", "System", "Candidates progression updated");
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("InnerException") || e.Message.Contains("inner exception"))
+                {
+
+                    return StatusCode(202, "InnerExeption: " + e.InnerException);
+                }
+                else
+                {
+
+                    return StatusCode(202, "Error Message: " + e.Message);
+                }
+            }
+        }
 
         [HttpGet("candidatesProgression")]
         public async Task<ActionResult> candidatesProgression(int? userId, DateTime from, DateTime to)
         {
             try
             {
-
+                
                 List<Candidate> candidates = _context.Candidates.Where(x => (userId == null ? x.Firstname.Contains("") : x.AsignTo == userId) && x.ModifiedDate.Value.Date >= from.Date && x.ModifiedDate.Value.Date <= to).ToList();
 
                 List<int> values = new();
@@ -123,7 +154,7 @@ namespace nbRecruitment.Controllers
         {
             try
             {
-                List<Posting> openPosting = _context.Postings.Where(x => (userId == null ? x.JobType.Contains("") : x.CreatedBy == userId) && x.Status == 1 && x.IsDelete == 0).ToList();
+                List<Posting> openPosting = _context.Postings.Where(x => (userId == null ? x.JobType.Contains("") : x.CreatedBy == userId) && x.Status == 1 && x.IsDelete == 0 && x.IsPending == 0).ToList();
                 List< DataPoint > points = new List< DataPoint >();
 
 
@@ -140,12 +171,15 @@ namespace nbRecruitment.Controllers
                         strokeWidth = 10,
                         strokeHeight = 5,
                         strokeLineCap = "round",
-                        strokeColor = "#775DD0"
+                        strokeColor = "#000000"
                     });
+
+                    string x = $"{posting.JobType}@{posting.ClientName}";
+            
 
                     points.Add(new DataPoint
                     {
-                        X = posting.JobType,
+                        X = x,
                         Y = candidates,
                         Goals = goals
                     });

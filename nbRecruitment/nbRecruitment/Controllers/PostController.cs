@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MimeKit.Utils;
+using MimeKit;
 using nbRecruitment.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics.Metrics;
 using static nbRecruitment.Controllers.PostingController;
+using MailKit.Net.Smtp;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace nbRecruitment.Controllers
 {
@@ -13,10 +18,8 @@ namespace nbRecruitment.Controllers
     public class PostController : ControllerBase
     {
 
-
         private readonly NbRecruitmentContext _context;
         private readonly IConfiguration _configuration;
-
 
         public PostController(NbRecruitmentContext context, IConfiguration configuration)
         {
@@ -33,15 +36,14 @@ namespace nbRecruitment.Controllers
             {
 
                 var postingList = _context.Postings.
-                    Where(x => x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).
+                    Where(x => x.Status == 1 && x.IsPending == 0 && x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).
                     OrderByDescending(x => x.Id).
                     Skip(page * size).
                     Take(size).
-                   
                     ToList();
 
                 int postingCount = _context.Postings.
-                    Where(x =>  x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).Count();
+                    Where(x => x.IsPending == 0 && x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).Count();
 
                 return Ok(new { postingList , postingCount});
 
@@ -61,6 +63,33 @@ namespace nbRecruitment.Controllers
             }
         }
 
+        [HttpGet("directPost")]
+        public async Task<ActionResult> directPost(int Id)
+        {
+            try
+            {
+
+                Posting postingList = _context.Postings.
+                    Where(x => x.Id == Id && x.Status == 1 && x.IsPending == 0 && x.IsDelete == 0).
+                    FirstOrDefault();
+
+                return Ok(postingList);
+
+            }
+            catch (Exception e)
+            {
+                if (e.Message.Contains("InnerException") || e.Message.Contains("inner exception"))
+                {
+
+                    return StatusCode(202, "InnerExeption: " + e.InnerException);
+                }
+                else
+                {
+
+                    return StatusCode(202, "Error Message: " + e.Message);
+                }
+            }
+        }
 
         [HttpGet("country")]
         public async Task<ActionResult> country(int postingId)
@@ -114,6 +143,29 @@ namespace nbRecruitment.Controllers
             }
         }
 
+        public static string Encrypt(string plainText)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = ASCIIEncoding.ASCII.GetBytes("GroupNBEncry2024");
+                aesAlg.IV = ASCIIEncoding.ASCII.GetBytes("GroupNBEncry2024");
+
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(plainText);
+                        }
+                        return Convert.ToBase64String(msEncrypt.ToArray());
+                    }
+                }
+            }
+        }
+
         [HttpPost("addCandidate")]
         public async Task<IActionResult> addCandidate(
             [FromForm] IFormFile file,
@@ -132,7 +184,8 @@ namespace nbRecruitment.Controllers
                 List<AsignUser> recruiter = _context.AsignUsers.Where(x => x.PostingId.Equals(Selectedposting.Id) ).OrderBy(x => x.Count).ToList();
                 var test = obj.dob;
                 DateOnly dob = DateOnly.Parse((obj.dob).ToString("yyyy-MM-dd"));
-                sbyte polo = obj.current_residing_country == "PH" ? sbyte.Parse("1") : sbyte.Parse("0");
+                string tempPolo = obj.current_residing_address;
+                sbyte polo = tempPolo.ToLower() == "ph" || tempPolo.ToLower().Contains("philippine") ? sbyte.Parse("1") : sbyte.Parse("0");
                 string numberCut = obj.contactNumber;
                 string numberCodeCut = obj.countryCode;
                 Candidate candidate = new Candidate() {
@@ -150,8 +203,6 @@ namespace nbRecruitment.Controllers
                     Num = numberCut.Remove(0, numberCodeCut.Length),
                     Email = obj.email,
                     Polo = polo,
-                    CurrentCountry = obj.current_residing_country,
-                    Country = obj.residing_country,
                     StatusDescription = "New",
                     LastStatusDescription = "New",
                     Status = 1
@@ -204,6 +255,11 @@ namespace nbRecruitment.Controllers
                 }
 
                 _context.SaveChanges();
+
+                string link = "http://apps.groupnb.com.ph/recruitmentapplication/canada/upload?details=" + Encrypt($"{candidate.Id}-{candidate.Lastname}, {candidate.Firstname} {candidate.Middlename}");
+
+                 sendEmail(candidate.Email, Selectedposting.JobType, link);
+
                 return Ok();
 
 
@@ -224,6 +280,49 @@ namespace nbRecruitment.Controllers
                 }
             }
         }
+
+        public static void sendEmail(string candidateEmail, string JobType, string link)
+        {
+            var currDir = Directory.GetCurrentDirectory();
+            var mjmlPath = Path.Combine(currDir, Path.Combine("PDF", "emailTemplate.html"));
+            var content = System.IO.File.ReadAllText(mjmlPath);
+
+            // Replace placeholders in the HTML content with actual values
+            content = content.Replace("{{jobType}}", JobType);
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("GroupNB-noreply@groupnb.ca", "groupnb23@gmail.com"));
+            message.To.Add(new MailboxAddress("Recipient Name", candidateEmail));
+            message.Subject = "Requirements GroupNB";
+
+            var bodyBuilder = new BodyBuilder();
+            content = content.Replace("{{link}}", link);
+            content = content.Replace("{{jobType}}", JobType);
+            bodyBuilder.HtmlBody = content;
+
+            var logoImagePath = Path.Combine(currDir, "PDF", "images", "Logo.png");
+            var logoImage = bodyBuilder.LinkedResources.Add(logoImagePath);
+            logoImage.ContentId = MimeUtils.GenerateMessageId();
+
+            var centerImgPath = Path.Combine(currDir, "PDF", "images", "bg.png");
+            var centerImg = bodyBuilder.LinkedResources.Add(centerImgPath);
+            centerImg.ContentId = MimeUtils.GenerateMessageId();
+
+
+            bodyBuilder.HtmlBody = bodyBuilder.HtmlBody
+                .Replace("{{Logo}}", $"cid:{logoImage.ContentId}")
+                 .Replace("{{centerImg}}", $"cid:{centerImg.ContentId}");
+
+            message.Body = bodyBuilder.ToMessageBody();
+            using (var client = new SmtpClient())
+            {
+                client.Connect("smtp.gmail.com", 587, false);
+                client.Authenticate("groupnb23@gmail.com", "dwxlbnyzqaxzjtbx");
+                client.Send(message);
+                client.Disconnect(true);
+            }
+        }
+
 
         [HttpGet("getDir")]
         public async Task<IActionResult> getDir(string toCombine)

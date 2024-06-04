@@ -231,6 +231,8 @@ C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\
 C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\net8.0\ref\nbRecruitment.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\appsettings.Development.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\appsettings.json
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\libman.json
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.staticwebassets.runtime.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.exe
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.deps.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.runtimeconfig.json

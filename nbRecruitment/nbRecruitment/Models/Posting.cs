@@ -44,4 +44,6 @@ public partial class Posting
     public int ClientId { get; set; }
 
     public string ClientName { get; set; } = null!;
+
+    public sbyte? IsPending { get; set; }
 }

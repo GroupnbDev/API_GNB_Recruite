@@ -18,11 +18,11 @@ namespace nbRecruitment.Controllers
 
 
         private readonly NbRecruitmentContext _context;
-        private readonly GnbContext _contextP;
+        private readonly GnberpContext _contextP;
         private readonly IConfiguration _configuration;
 
 
-        public PostingController(NbRecruitmentContext context, GnbContext contextP, IConfiguration configuration)
+        public PostingController(NbRecruitmentContext context, GnberpContext contextP, IConfiguration configuration)
         {
             _context = context;
             _contextP = contextP;
@@ -58,7 +58,7 @@ namespace nbRecruitment.Controllers
                     x.Name
                 }).ToList();
 
-                List<User> recruiter = _context.Users.Where(x => x.Status.Equals(1) && x.IsDelete.Equals(0)).ToList();
+                List<User> recruiter = _context.Users.Where(x => x.Status.Equals(1) && x.IsDelete.Equals(0) && x.Type != "Admin").ToList();
                 /*
                                 List<VLanguageRecruiter> userlanguages = _context.VLanguageRecruiters.Where(x => x.Status == 1).ToList();*/
 
@@ -108,7 +108,7 @@ namespace nbRecruitment.Controllers
                     x.Name
                 }).ToList();
 
-                List<User> recruiter = _context.Users.Where(x => x.Status.Equals(1) && x.IsDelete.Equals(0)).ToList();
+                List<User> recruiter = _context.Users.Where(x => x.Status.Equals(1) && x.IsDelete.Equals(0) && x.Type != "Admin").ToList();
                 /*
                                 List<VLanguageRecruiter> userlanguages = _context.VLanguageRecruiters.Where(x => x.Status == 1).ToList();*/
 
@@ -199,6 +199,7 @@ namespace nbRecruitment.Controllers
                        x.Requirements,
                        x.Type,
                        x.Status,
+                       x.IsPending,
                        x.CreatedDate,
                        Asign = _context.AsignUsers.Where(i => i.PostingId.Equals(x.Id) && i.Status.Equals(1)).Select(
                            i => new
@@ -231,6 +232,7 @@ namespace nbRecruitment.Controllers
             {
           
                 List<int> test = JsonConvert.DeserializeObject<List<int>>(tagUsers)!;
+                posting.IsPending = 1;
                 _context.Postings.Add(posting);
                 _context.SaveChanges();
 

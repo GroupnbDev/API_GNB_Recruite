@@ -457,3 +457,5 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\BouncyCastle.Cryptography.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\MailKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\MimeKit.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\libman.json
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Release\net8.0\linux-x64\nbRecruitment.staticwebassets.runtime.json

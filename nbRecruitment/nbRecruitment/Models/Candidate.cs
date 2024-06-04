@@ -29,10 +29,6 @@ public partial class Candidate
 
     public string Num { get; set; } = null!;
 
-    public string Country { get; set; } = null!;
-
-    public string CurrentCountry { get; set; } = null!;
-
     public string? StatusDescription { get; set; }
 
     public string? LastStatusDescription { get; set; }
