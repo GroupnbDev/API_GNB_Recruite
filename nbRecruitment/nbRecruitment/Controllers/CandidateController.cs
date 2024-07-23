@@ -89,7 +89,7 @@ namespace nbRecruitment.Controllers
             {
 
 
-                var candidates = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode &&
+                var candidates = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                 x.StatusDescription != "Progress" &&
                 x.StatusDescription != "Selected" &&
@@ -120,7 +120,7 @@ namespace nbRecruitment.Controllers
                     }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).ToList() :
-                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode &&
+                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                 x.StatusDescription != "Progress" &&
                 x.StatusDescription != "Selected" &&
@@ -152,14 +152,14 @@ namespace nbRecruitment.Controllers
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).ToList();
 
-                int candidatesCount = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode &&
+                int candidatesCount = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                 x.StatusDescription != "Progress" &&
                 x.StatusDescription != "Selected" &&
                 x.StatusDescription != "Not Selected"
                 ) : x.StatusDescription == jobCandidatesClass.filterBy)
                 ).Count() :
-                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode &&
+                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                 x.StatusDescription != "Progress" &&
                 x.StatusDescription != "Selected" &&
@@ -200,7 +200,7 @@ namespace nbRecruitment.Controllers
         {
             try
             {
-                var candidates = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode &&
+                var candidates = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                (x.StatusDescription == "Progress" ||
                 x.StatusDescription == "Selected" ||
@@ -231,7 +231,7 @@ namespace nbRecruitment.Controllers
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).
                     ToList() :
-                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode &&
+                    _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                 (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
                (x.StatusDescription == "Progress" ||
                 x.StatusDescription == "Selected" ||
@@ -263,14 +263,14 @@ namespace nbRecruitment.Controllers
                      Take(jobCandidatesClass.size).
                     ToList();
 
-                int candidatesCount = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode &&
+                int candidatesCount = jobCandidatesClass.type == "User" ? _context.Candidates.Where(x => x.AsignTo.Equals(jobCandidatesClass.userId) && x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
               (x.StatusDescription == "Progress" ||
                x.StatusDescription == "Selected" ||
                x.StatusDescription == "Not Selected")
                ) : x.StatusDescription == jobCandidatesClass.filterBy)
                ).Count() :
-                   _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode &&
+                   _context.Candidates.Where(x => x.JobCode == jobCandidatesClass.jobCode && x.Status.Equals(1) && x.IsDelete.Equals(0) &&
                (jobCandidatesClass.filterBy == "Select All" ? (x.StatusDescription.Contains("") &&
               (x.StatusDescription == "Progress" ||
                x.StatusDescription == "Selected" ||
