@@ -116,7 +116,8 @@ namespace nbRecruitment.Controllers
                         x.NumCode,
                         x.CurrentResidingAddress,
                         x.Nationality,
-                        x.IsViewed
+                        x.IsViewed,
+                        x.CreatedDate
                     }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).ToList() :
@@ -147,7 +148,8 @@ namespace nbRecruitment.Controllers
                         x.NumCode,
                         x.CurrentResidingAddress,
                         x.Nationality,
-                        x.IsViewed
+                        x.IsViewed,
+                        x.CreatedDate
                     }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).ToList();
@@ -226,7 +228,8 @@ namespace nbRecruitment.Controllers
                     x.NumCode,
                     x.CurrentResidingAddress,
                     x.Nationality,
-                    x.IsViewed
+                    x.IsViewed,
+                    x.CreatedDate
                 }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).
@@ -257,7 +260,8 @@ namespace nbRecruitment.Controllers
                     x.NumCode,
                     x.CurrentResidingAddress,
                     x.Nationality,
-                    x.IsViewed
+                    x.IsViewed,
+                    x.CreatedDate
                 }).
                      Skip(jobCandidatesClass.page * jobCandidatesClass.size).
                      Take(jobCandidatesClass.size).

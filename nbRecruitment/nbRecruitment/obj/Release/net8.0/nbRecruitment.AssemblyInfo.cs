@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nbRecruitment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93cf81986317f28df752b5b3402ba07288182aac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f4647ce771f04edcd801af9844373be6131fbe8")]
 [assembly: System.Reflection.AssemblyProductAttribute("nbRecruitment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nbRecruitment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
