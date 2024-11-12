@@ -84,13 +84,13 @@ namespace nbRecruitment.Controllers
 
 
         [HttpPost("approved")]
-        public async Task<ActionResult> approved(int postingId, sbyte isApproved)
+        public async Task<ActionResult> approved(int postingId, sbyte isApproved, int approver)
         {
             try
             {
 
                 Posting posting = _context.Postings.Where(x => x.Id == postingId).FirstOrDefault();
-
+                posting.Approver = approver;
                 posting.IsPending = isApproved;
 
                 _context.SaveChanges();

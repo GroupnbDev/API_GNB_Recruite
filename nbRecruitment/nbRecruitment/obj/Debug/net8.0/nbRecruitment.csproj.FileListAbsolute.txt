@@ -229,6 +229,7 @@ C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\
 C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\net8.0\nbRecruitment.pdb
 C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\net8.0\nbRecruitment.genruntimeconfig.cache
 C:\Users\MarkJearoneFAlvarez\source\repos\nbRecruitment\nbRecruitment\obj\Debug\net8.0\ref\nbRecruitment.dll
+C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\DinkToPdf.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\appsettings.Development.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\appsettings.json
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\libman.json
@@ -240,7 +241,6 @@ C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitme
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\nbRecruitment.pdb
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Humanizer.dll
-C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\DinkToPdf.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\MailKit.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\GIT\API_GNB_Recruite\nbRecruitment\nbRecruitment\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll

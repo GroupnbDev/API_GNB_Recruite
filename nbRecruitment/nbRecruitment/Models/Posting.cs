@@ -46,4 +46,6 @@ public partial class Posting
     public string ClientName { get; set; } = null!;
 
     public sbyte? IsPending { get; set; }
+
+    public int? Approver { get; set; }
 }

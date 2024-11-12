@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MimeKit.Cryptography;
 using nbRecruitment.Models;
 using nbRecruitment.ModelsERP;
@@ -169,15 +170,15 @@ namespace nbRecruitment.Controllers
 
         }
 
-
         [HttpPost("postingList")]
         public async Task<ActionResult> postingList(int employeeId,  string? search, int page,int size)
         {
             try
             {
+                bool isAdmin = (await _context.Users.FirstOrDefaultAsync(x => x.Id.Equals(employeeId)))?.Type == "Admin";
 
-               var postingList = _context.Postings.
-                    Where(x => x.CreatedBy.Equals(employeeId) && x.IsDelete == 0 && (search == null? x.JobType.Contains("") : x.JobType.Contains(search))).
+                var postingList = await _context.Postings.
+                    Where(x => (isAdmin || (x.CreatedBy == employeeId)) && x.IsDelete == 0 && (search == null? x.JobType.Contains("") : x.JobType.Contains(search))).
                     OrderByDescending(x => x.Id).
                     Skip(page * size).
                     Take(size).
@@ -201,6 +202,8 @@ namespace nbRecruitment.Controllers
                        x.Status,
                        x.IsPending,
                        x.CreatedDate,
+                       CreatedBy = _context.Users.Where(item => item.Id.Equals(x.CreatedBy)).FirstOrDefault()!.Fullname,
+                       ApprovedBy = x.Approver != null? _context.Users.Where(item => item.Id.Equals(x.Approver)).FirstOrDefault()!.Fullname: null,
                        Asign = _context.AsignUsers.Where(i => i.PostingId.Equals(x.Id) && i.Status.Equals(1)).Select(
                            i => new
                            {
@@ -210,10 +213,10 @@ namespace nbRecruitment.Controllers
                            ).ToList(),
                    }
                    ).
-                    ToList();
+                    ToListAsync();
 
                 int postingCount = _context.Postings.
-                    Where(x => x.CreatedBy.Equals(employeeId) && x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).Count();
+                    Where(x => (isAdmin || (x.CreatedBy == employeeId)) && x.IsDelete == 0 && (search == null ? x.JobType.Contains("") : x.JobType.Contains(search))).Count();
 
 
                 return Ok(new { postingList , postingCount });
@@ -307,7 +310,7 @@ namespace nbRecruitment.Controllers
                 posting.Location = newPosting.Location;
                 posting.Currency = newPosting.Currency;
                 posting.Per = newPosting.Per;
-                posting.Salary = posting.Salary;
+                posting.Salary = newPosting.Salary;
                 posting.Responsibility = newPosting.Responsibility;
                 posting.Description = newPosting.Description;
                 posting.Requirements = newPosting.Requirements;

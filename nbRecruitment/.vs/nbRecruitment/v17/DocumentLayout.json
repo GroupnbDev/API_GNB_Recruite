@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\candidatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|c:\\git\\api_gnb_recruite\\nbrecruitment\\nbrecruitment\\controllers\\erpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A230C2C-7CE1-4A0D-BF0D-A2C56423E5B5}|nbRecruitment\\nbRecruitment.csproj|solutionrelative:nbrecruitment\\controllers\\erpcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ErpController.cs",
+              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\ErpController.cs",
+              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\ErpController.cs",
+              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\ErpController.cs",
+              "RelativeToolTip": "nbRecruitment\\Controllers\\ErpController.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAUwIMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T07:39:22.633Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -27,32 +36,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CandidateController.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Controllers\\CandidateController.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Controllers\\CandidateController.cs",
-              "RelativeToolTip": "nbRecruitment\\Controllers\\CandidateController.cs",
-              "ViewState": "AQIAACYBAAAAAAAAAAAewDgBAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T15:44:01.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Program.cs",
-              "RelativeDocumentMoniker": "nbRecruitment\\Program.cs",
-              "ToolTip": "C:\\GIT\\API_GNB_Recruite\\nbRecruitment\\nbRecruitment\\Program.cs",
-              "RelativeToolTip": "nbRecruitment\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-12T15:00:58.91Z",
-              "EditorCaption": ""
             }
           ]
         }

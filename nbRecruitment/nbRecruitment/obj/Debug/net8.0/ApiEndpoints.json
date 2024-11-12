@@ -615,6 +615,11 @@
         "Name": "isApproved",
         "Type": "System.SByte",
         "IsRequired": false
+      },
+      {
+        "Name": "approver",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
